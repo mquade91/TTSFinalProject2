@@ -15,7 +15,6 @@ for (var i = 0; i < card.length; i++) {
   //Listen for OPEN click on a card class
   card[i].addEventListener('click', modalAppear, false);
 }
-
 //function to CLOSE modal
 function closeModal() {
   modal.style.display = 'none';
