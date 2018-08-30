@@ -1,0 +1,134 @@
+body{
+  background-color: rgb(232,232,232);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+  width:90%;
+  margin:auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+
+}
+
+.grid {
+  border-radius:2px;
+  color: #fff;
+  padding: 15px;
+  font-size: 3em;
+}
+
+.header {
+  background: teal;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.sidebar {
+  color:coral;
+  grid-column: 1/2;
+  grid-row:2/4;
+  background-image:linear-gradient(white, orange)
+}
+
+.content {
+  overflow:auto;
+  grid-column-start: 2/3;
+  grid-row: 2/3;
+  background: teal;
+  height: 400px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  }
+
+  .card {
+  border: 2px solid #e7e7e7;
+  border-radius: 4px;
+  padding: .5rem;
+  }
+  /* Modal Styling*/
+.modal {
+  display:none;
+  position:fixed;
+  z-index:1;
+  left:0;
+  top:0;
+  height: 100%;
+  width:100%;
+  overflow:auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: whitesmoke;
+  /* positions content of modal,  margin move up and down screen */
+  margin: 20% auto;
+  width:70%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2), 0 7px 20px 0 rgba(0,0,0, 0.17) ;
+  animation-name: modalopen;
+  animation-duration:0.5s;
+}
+
+.modal-header h2 {
+  margin:0;
+}
+.modal-footer h3{
+  margin:0;
+}
+
+.modal-header {
+background: coral;
+padding: 15px;
+color:white;
+}
+
+
+.modal-body{
+  padding:10px 20px
+}
+
+.modal-footer {
+  background:coral;
+  padding:10px;
+  color:white;
+  text-align: center;
+}
+.closeBtn {
+  color:white;
+  float:right;
+  font-size:30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+cursor:pointer;
+color:blue;
+text-decoration: none;
+}
+
+@keyframes modalopen {
+  from{opacity:0}
+  to{opacity: 1}
+}
+
+@keyframes modalclose {
+  from{opacity:0}
+  to{opacity: 1}
+}
+
+.extra {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background: #898989;
+}
+
+.footer {
+  grid-column: 1/3;
+  grid-row: 4/4;
+  background:turquoise;
+}
